@@ -43,6 +43,7 @@ public class TicketService {
 
         // assign a spot
         ParkingSpot spot = spotAssignmentStrategy.assignSpot();
+        spot.setParkingStatus(ParkingStatus.NOT_AVAILABLE);
         ticket.setParkingSpot(spot);
 
         // assign a Gate

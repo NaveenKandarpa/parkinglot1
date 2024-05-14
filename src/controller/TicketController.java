@@ -10,6 +10,7 @@ public class TicketController {
     public  TicketController(TicketService ticketService) {
         this.ticketService = ticketService;
     }
+
     public IssueTicketResponseDto issueTicket(IssueTicketRequestDto dto) {
         Ticket ticket = ticketService.generateTicket(dto.getVehicleNumber(),
                 dto.getName(),
